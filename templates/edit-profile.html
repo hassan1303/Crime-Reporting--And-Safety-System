@@ -1,0 +1,36 @@
+{#{% extends 'base_generic.html' %}#}
+{##}
+{#{% block content %}#}
+{#  <h2>Edit Profile</h2>#}
+{#  <form method="POST" enctype="multipart/form-data">#}
+{#  {% csrf_token %}#}
+{#    {{ form.as_p }}#}
+{#    <button type="submit">Update</button>#}
+{#  </form>#}
+{#{% endblock %}#}
+
+{% extends 'base_generic.html' %}
+
+{% block content %}
+    <br>
+    <div class="container">
+         <h2 style="text-align: center">Edit Profile</h2>
+        <br>
+           <form id="report-form" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label for="{{ form.location.id_for_label }}">Location:</label>
+            {{ form.location }}
+            <label for="{{ form.birth_date.id_for_label }}">DOB:</label>
+            {{ form.birth_date }}
+               <label for="{{ form.picture.id_for_label }}">Change Picture</label>
+            {{ form.picture }}
+            <label for="{{ form.bio.id_for_label }}">Bio:</label>
+            {{ form.bio }}
+               <div style="text-align: center;">
+                   <button type="submit" class="btn" style="background-color: #333;">Update</button>
+               </div>
+               <br><br><br>
+
+        </form>
+    </div>
+{% endblock %}

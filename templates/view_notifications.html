@@ -1,0 +1,21 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+    <br><br>
+    <div class="container">
+      <ul id="report-form">
+           <h2 style="text-align: center">Notifications</h2>
+      <hr>
+      {% for notification in notifications %}
+        <li style="list-style: none">
+          <a href="{% url 'read_notification' notification.id %} " style="font-size: 1.5rem; text-underline: none">{{ notification.title }}</a>
+          <p style="text-align: right;font-size: 0.9rem">{{ notification.timestamp }}</p>
+        </li>
+          <hr>
+      {% empty %}
+        <li>No notifications.</li>
+      {% endfor %}
+      </ul>
+    </div>
+ 
+{% endblock %}

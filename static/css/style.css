@@ -1,0 +1,488 @@
+
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo img {
+    max-height: 50px;
+    width: 30px;
+    
+}
+
+/*.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}*/
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #575757;
+    border-radius: 4px;
+}
+.container .icons a img{
+    cursor: pointer;
+    height:4.5rem;
+    width:4.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 50%;
+}
+.container .icons i,
+.container .icons a {
+    position: relative;
+    cursor: pointer;
+    margin-left: .5rem;
+    height:3rem;
+    line-height: 3rem;
+    width:3rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color:#491217;
+    border-radius: 50%;
+    background: #eee;
+}
+
+.container .icons .notification-dot {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 10px;
+    width: 10px;
+    background-color: red;
+    border-radius: 50%;
+}
+.container .profile-image img{
+    cursor: pointer;
+    height:9.5rem;
+    width:10rem;
+    text-align: center;
+    border-radius: 50%;
+    padding: .2rem;
+    border: 4.5px solid #333;
+}
+
+
+.container .icons i:hover,
+.container .icons a:hover{
+    color:#fff;
+    background: var(--green);
+    transform: rotate(360deg);
+}
+
+/* Home Section */
+#home {
+    background: url('../images/background.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 10rem 0;
+}
+
+#home .hero {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+#home h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#home p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+#home .btn {
+    display: inline-block;
+    background-color: #ff6347;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#home .btn:hover {
+    background-color: #e5533d;
+}
+
+/* Footer */
+/*.footer {*/
+/*    background-color: #333;*/
+/*    color: #fff;*/
+/*    text-align: center;*/
+/*    padding: 1rem 0;*/
+/*}*/
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    padding:1rem 0;
+    background-color: #333;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links a {
+        padding: 0.5rem;
+        width: 100%;
+        text-align: left;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    #home h1 {
+        font-size: 2rem;
+    }
+
+    #home p {
+        font-size: 1rem;
+    }
+}
+
+
+/* Report Section */
+.section {
+    padding: 4rem 0;
+    background-color: #f9f9f9;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+#report-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#report-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+#report-form input,
+#report-form select,
+#report-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+#report-form input,
+#report-form select,
+#report-form textarea {
+    box-sizing: border-box;
+}
+
+#report-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+#report-form input[type="file"] {
+    padding: 0.5rem;
+    border: none;
+}
+
+#report-form .btn {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+#report-form .btn:hover {
+    background-color: #218838;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .section {
+        padding: 2rem 0;
+    }
+
+    #report-form {
+        padding: 1rem;
+    }
+}
+
+
+
+/* About Section */
+.section {
+    padding: 4rem 0;
+    background-color: #f0f0f0;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.section p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .section {
+        padding: 2rem 0;
+    }
+
+    .section h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .section p {
+        font-size: 1rem;
+    }
+}
+
+
+/* Safety Section */
+.section {
+    padding: 4rem 0;
+    background-color: #f0f0f0;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+article {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+article h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+article p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .section {
+        padding: 2rem 0;
+    }
+
+    .section h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    article h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    article p {
+        font-size: 1rem;
+    }
+}
+
+
+/* Login Section */
+.section {
+    padding: 4rem 0;
+    background-color: #f9f9f9;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+#login-form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#login-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+#login-form input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#login-form .btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+#login-form .btn:hover {
+    background-color: #0056b3;
+}
+
+.section p {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+.section p a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.section p a:hover {
+    color: #0056b3;
+}
+.form-control {
+    width: 100%;
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .section {
+        padding: 2rem 0;
+    }
+
+    .section h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    #login-form {
+        padding: 1.5rem;
+    }
+
+    #login-form .btn {
+        padding: 0.75rem 1rem;
+    }
+
+    .section p {
+        font-size: 0.9rem;
+    }
+}

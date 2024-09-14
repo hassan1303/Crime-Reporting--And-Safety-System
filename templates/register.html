@@ -1,0 +1,33 @@
+{% extends 'base_generic.html' %}
+{% block content %}
+    <!-- Registration Section -->
+   <section id="login" class="section">
+        <div class="container">
+            <form id="login-form" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                    <h2 style="text-align: center">Register</h2>
+                    {% if messages %}
+                    {% comment %} {{ message.tags }} {% endcomment %}
+                    <div class="alert alert-primary" role="alert">
+                        {% for message in messages %}
+                        {{ message }}
+                        {% endfor %}
+                      </div>
+                    {% endif %}
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <label for="username">username</label>
+                <input type="text" name="username" id="username">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password">
+                <button type="submit" class="btn">Register</button>
+            </form>
+            <p>Already have an account? <a href="login.html">Login here</a></p>
+        </div>
+    </section>
+{% endblock %}
+

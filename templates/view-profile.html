@@ -1,0 +1,25 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+<br>
+    <h2 style="text-align: center">Profile</h2><br>
+    <div class="container " style="text-align: center;">
+  <div class="profile-image" id ="report-form">
+      {% if user.profile.picture %}
+      <img src="{{ user.profile.picture.url }}" alt="Profile Picture">
+    {% else %}
+          <i class="fas fa-user-circle"></i>
+    {% endif %}
+        <h2><strong> {{ user.first_name }}</strong></h2>
+
+    <hr>
+    <strong>Bio</strong>
+    <p>{{ user.profile.bio }}</p>
+    <p><strong>Location:</strong> {{ user.profile.location }}</p>
+    <p><strong>Birth Date:</strong> {{ user.profile.birth_date }}</p>
+    <a href="{% url 'edit_profile' %}">Edit Profile</a>
+    </div>
+  </div>
+{% endblock %}
+    
+  
